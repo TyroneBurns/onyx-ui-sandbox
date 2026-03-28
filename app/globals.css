@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 216 40% 4%;
+  --foreground: 210 29% 96%;
+  --panel: 217 39% 11%;
+  --elevated: 217 37% 15%;
+  --border: 214 20% 22%;
+  --accent: 142 72% 45%;
+  --muted: 217 21% 59%;
+  --danger: 0 84% 60%;
+  --warning: 38 92% 50%;
+  --info: 188 94% 53%;
+  --violet: 255 91% 76%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(34, 197, 94, 0.08), transparent 24%),
+    radial-gradient(circle at top right, rgba(34, 211, 238, 0.06), transparent 22%),
+    linear-gradient(180deg, #070b11 0%, #0a1019 100%);
+  color: hsl(var(--foreground));
+}
+
+::selection {
+  background: rgba(34, 197, 94, 0.2);
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: -0.03em;
+  }
+}
+
+@layer utilities {
+  .panel-mask {
+    mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.85));
+  }
+}
