@@ -9,7 +9,7 @@ import { KpiCard } from '@/components/ui/kpi-card';
 export default function AnalyticsPage() {
   return (
     <AppShell title="Analytics" subtitle="Performance, equity behaviour, and regime quality across the ONYX stack.">
-      <section className="space-y-8">
+      <section className="space-y-8 overflow-safe">
         <SectionHeading
           eyebrow="Insight layer"
           title="Performance and capital analytics"
@@ -55,7 +55,7 @@ export default function AnalyticsPage() {
                 ['Trade suppression', 'Active'],
                 ['Noise filter', 'Tightened']
               ].map(([label, value]) => (
-                <div key={label} className="flex items-center justify-between rounded-2xl border border-white/6 bg-white/4 px-4 py-3">
+                <div key={label} className="flex items-center justify-between gap-3 rounded-2xl border border-white/6 bg-white/4 px-4 py-3">
                   <span className="text-sm text-slate-400">{label}</span>
                   <span className="font-mono text-sm text-white">{value}</span>
                 </div>

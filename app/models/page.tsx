@@ -7,7 +7,7 @@ import { StatusPill } from '@/components/ui/status-pill';
 export default function ModelsPage() {
   return (
     <AppShell title="Models" subtitle="Regime models, confirm layers, and risk compression in the ONYX stack.">
-      <section className="space-y-8">
+      <section className="space-y-8 overflow-safe">
         <SectionHeading
           eyebrow="Model layer"
           title="Model registry and confidence view"
@@ -17,12 +17,12 @@ export default function ModelsPage() {
         <div className="grid gap-4 xl:grid-cols-3">
           {modelCards.map((model) => (
             <Card key={model.name} className="p-6">
-              <div className="flex items-start justify-between">
-                <div>
+              <div className="flex items-start justify-between gap-3">
+                <div className="min-w-0">
                   <p className="text-xs uppercase tracking-[0.18em] text-slate-500">{model.version}</p>
                   <h3 className="mt-2 text-xl font-semibold text-white">{model.name}</h3>
                 </div>
-                <StatusPill label="Stable" tone="positive" />
+                <StatusPill label="Stable" tone="positive" pulse />
               </div>
               <div className="mt-6 grid grid-cols-2 gap-3">
                 <div className="rounded-2xl border border-white/6 bg-white/4 p-4">

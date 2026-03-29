@@ -13,7 +13,7 @@ import { TradesTable } from '@/components/table/trades-table';
 export default function OverviewPage() {
   return (
     <AppShell title="ONYX Control Centre" subtitle="Premium sandbox rebuild for the trading dashboard UI.">
-      <section className="space-y-8">
+      <section className="space-y-8 overflow-safe">
         <div className="grid gap-4 xl:grid-cols-4">
           {kpis.map((item, index) => (
             <KpiCard key={item.label} index={index} {...item} />

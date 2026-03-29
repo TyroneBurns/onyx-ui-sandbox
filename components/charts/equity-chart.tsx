@@ -6,12 +6,12 @@ import { Card } from '@/components/ui/card';
 
 export function EquityChart() {
   return (
-    <Card className="p-5 md:p-6">
-      <div className="mb-6">
+    <Card className="min-w-0 p-5 md:p-6">
+      <div className="mb-6 min-w-0">
         <p className="text-xs uppercase tracking-[0.18em] text-slate-500">Equity curve</p>
         <h3 className="mt-2 text-xl font-semibold tracking-[-0.03em] text-white">Capital growth trajectory</h3>
       </div>
-      <div className="h-[260px]">
+      <div className="h-[260px] min-w-0">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={equitySeries}>
             <XAxis axisLine={false} tickLine={false} tick={{ fill: '#64748b', fontSize: 12 }} dataKey="point" />

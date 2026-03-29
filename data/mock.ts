@@ -63,22 +63,26 @@ export const activityFeed = [
   {
     title: 'Model ONYX-HMM-07 shifted into trending regime',
     meta: '2 mins ago · Confidence 92% · BTC/USD',
-    tone: 'positive' as const
+    tone: 'positive' as const,
+    market: 'BTC/USD'
   },
   {
     title: 'Risk engine reduced position size by 1.2%',
-    meta: '12 mins ago · Volatility spike filter',
-    tone: 'warning' as const
+    meta: '12 mins ago · Volatility spike filter · XAU/USD',
+    tone: 'warning' as const,
+    market: 'XAU/USD'
   },
   {
     title: 'Signal validation passed on 3 new entries',
-    meta: '27 mins ago · EMA / order-flow alignment',
-    tone: 'info' as const
+    meta: '27 mins ago · EMA / order-flow alignment · ETH/USD',
+    tone: 'info' as const,
+    market: 'ETH/USD'
   },
   {
     title: 'Trade closed at target 2',
-    meta: '41 mins ago · +£4,320 realised',
-    tone: 'positive' as const
+    meta: '41 mins ago · +£4,320 realised · BTC/USD',
+    tone: 'positive' as const,
+    market: 'BTC/USD'
   }
 ];
 
