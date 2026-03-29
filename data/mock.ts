@@ -13,28 +13,36 @@ export const kpis = [
     value: '£182,420',
     delta: '+12.8%',
     detail: 'vs previous 30 days',
-    tone: 'positive' as const
+    tone: 'positive' as const,
+    progress: 78,
+    footnote: 'Equity curve still rising'
   },
   {
     label: 'Win rate',
     value: '63.4%',
     delta: '+4.1%',
     detail: 'quality threshold 82',
-    tone: 'positive' as const
+    tone: 'positive' as const,
+    progress: 63,
+    footnote: 'Cleaner continuation set-ups'
   },
   {
     label: 'Open exposure',
     value: '£64,800',
     delta: '-1.9%',
     detail: '8 live positions',
-    tone: 'warning' as const
+    tone: 'warning' as const,
+    progress: 54,
+    footnote: 'Risk engine trimmed size'
   },
   {
     label: 'Model confidence',
     value: '91.2%',
     delta: '+2.7%',
     detail: 'HMM regime stable',
-    tone: 'info' as const
+    tone: 'info' as const,
+    progress: 91,
+    footnote: 'Bias stack aligned'
   }
 ];
 
@@ -93,7 +101,9 @@ export const signalCards = [
     confidence: '92%',
     quality: '88',
     regime: 'Trend expansion',
-    status: 'Live'
+    status: 'Live',
+    conviction: 'A-tier',
+    note: 'High-liquidity continuation with aligned velocity'
   },
   {
     pair: 'ETH/USD',
@@ -101,7 +111,9 @@ export const signalCards = [
     confidence: '84%',
     quality: '82',
     regime: 'Controlled breakout',
-    status: 'Queued'
+    status: 'Queued',
+    conviction: 'B-tier',
+    note: 'Waiting for cleaner spread compression'
   },
   {
     pair: 'SOL/USD',
@@ -109,7 +121,9 @@ export const signalCards = [
     confidence: '79%',
     quality: '76',
     regime: 'Unstable chop',
-    status: 'Blocked'
+    status: 'Blocked',
+    conviction: 'Filtered',
+    note: 'Flip risk still too high for clean follow-through'
   }
 ];
 
@@ -121,7 +135,9 @@ export const trades = [
     exit: '64,980',
     pnl: '+£4,320',
     status: 'Closed',
-    reason: 'Target 2 hit'
+    reason: 'Target 2 hit',
+    openedAgo: 'Opened 2h ago',
+    marketType: 'Spot market'
   },
   {
     market: 'ETH/USD',
@@ -130,7 +146,9 @@ export const trades = [
     exit: '3,142',
     pnl: '-£860',
     status: 'Closed',
-    reason: 'Signal flip'
+    reason: 'Signal flip',
+    openedAgo: 'Closed 38m ago',
+    marketType: 'Spot market'
   },
   {
     market: 'SOL/USD',
@@ -139,7 +157,9 @@ export const trades = [
     exit: '138.8',
     pnl: '+£1,140',
     status: 'Open',
-    reason: 'Runner active'
+    reason: 'Runner active',
+    openedAgo: 'Runner still live',
+    marketType: 'Spot market'
   },
   {
     market: 'NAS100',
@@ -148,7 +168,9 @@ export const trades = [
     exit: '18,406',
     pnl: '+£2,060',
     status: 'Closed',
-    reason: 'Momentum continuation'
+    reason: 'Momentum continuation',
+    openedAgo: 'Closed 4h ago',
+    marketType: 'Index contract'
   },
   {
     market: 'XAU/USD',
@@ -157,7 +179,9 @@ export const trades = [
     exit: '2,191',
     pnl: '-£540',
     status: 'Closed',
-    reason: 'Risk cut'
+    reason: 'Risk cut',
+    openedAgo: 'Closed 1h ago',
+    marketType: 'Metal spot'
   }
 ];
 
